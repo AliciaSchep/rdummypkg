@@ -1,5 +1,3 @@
-# R for travis: see documentation at https://docs.travis-ci.com/user/languages/r
-
 language: R
 sudo: false
 cache: packages
@@ -9,6 +7,6 @@ r_packages:
 - packagedocs
 env:
   global:
-    secure: kiAXm3tJd5SVjemkoUKMnBuz5AaT5chA281oNVtGn1V2pjrOkcFVMUPRh+uJ+772OBPvheFKErquCdI2UKwcbsL/Pw5eBPKS5w6XnK3ukAqxEHneN1XoPe27sKJcSIwSBDSv1u8oUT1yCfF0MmRq1vbw352x1rbEf+uEo/lbK8T0y3wZtzzTYRJm1b3UvnMJJdziTM3vOFJRAMidIdov61ulXA+R14tWEWMscd5xTluN3hhlqfitWh1NUa11MWt3rO9qUkjkwbPjB5qhZdt0dD425VQe6KKOUXMIri2Jd4CDqiPPmf1vyFBQwHLoWrYO1KnUvPCFLNrYk23brEscG+2jAnEWxjlsCNE1Iye2ol8jiZ+/Uk3EAIcAIIKfYjeSBEoQh6rqhaGmIBWj14bKpJ5rEY7Z/4x+jroUXfOF7bBlvwDW8NDe9dWXM7YRYDJaVVMXKGs50va2hABJH+39SfniCPzZnzUgrKdZqKw3vuhqQQ3a9JZjHMJekE88YlYaDoT6yFmn2+61e3fwilcb/EPImQvDOxUk7kY35gYQXqo8LZT/rCtPfT9UQyJVivQ5shtuSp30X7ipfdJy+d4KhoVl7B9yTIZ2f3FU3ju/I1z0XAqcgpBbLZV3SQ0rXLBvbMUrZ5My/n40SFqDMvxI1wfnNjNTHwYLzZOko3EFyLo=
+    secure: mvPW0K9aR+S0HIhRd7x8ylF/Eu3u/hiks5xc8Xxz/rF/UWuGihDk0v0qpsdfAbgPW8CsAimXL9dFL6EwB23g226VXTixHdPgtKULYxLd074FWT7saaz9Hntt3Bsru+iumVU77OEjnPePKtYO7kNj1Vu3DW9SDYxxJXhM/NU9FtBp0ovffdt9f3gcOHRxDIks0/B/OtF4UvyEZMNn/U0qx4Ro0iJWu5nV0KKvQ/LALreaApZhP65ibkDAF/xNa7Rlvo5HPgn/g2efsKTl829mpPTCAzM7w6ybeQjQw+D/NyUr3ZvLo8QdSdIhWlopbstQkhktVQwxhzk2krpipThxnVKv4JB8tFhktNlHR0RGT0tTRj8425wQra8xjT394wSbAfFMbZDfkvXarozVuoxEFhBrgIiGldNkWl+ubfAiIxL0XnPu0UbZkv4lb/B+MVihOtmVik2bhQvURJ0RUIx1yaADr5tkZaXtfJJVAKTMsGPjXqvtU7p98QEEevu5XXZDuQaiTZyWkF7+4JNgYQt/nZPt0w6YXCBx1T71H4aZjWxVK/2VNR3HCZzHSg+a820THJ53hq9rqZZ3VD/vX7ZNMjXYZcb0lquh0CpqnhD5Hs11MQYuOpxrwR432gqOZgpT9OotW402aIVMKPrPFqfpdwijld9xYJD9ODw+N+PEVQc=
 after_success:
 - Rscript -e "packagedocs::deploy_travis(build_fn = function(output_dir, ...){devtools::install('.'); pkgdown::build_site(path = output_dir)})"
