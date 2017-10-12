@@ -3,7 +3,7 @@ Title: Package that does nothing
 Version: 0.0.0.9000
 Authors@R: person("Alicia", "Schep", email = "aschep@gmail.com", role = c("aut", "cre"))
 Description: This package does nothing!
-Depends: R (>= 3.4.2)
+Depends: R (>= 3.4.0)
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
