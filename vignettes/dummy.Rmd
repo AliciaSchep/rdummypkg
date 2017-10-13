@@ -1,0 +1,16 @@
+---
+title: "rdummypkg"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{rdummypkg}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This is a dummy package that does nothing! 
+
+```{r}
+devtools::session_info()
+```
+
