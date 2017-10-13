@@ -11,6 +11,12 @@ vignette: >
 This is a dummy package that does nothing! 
 
 ```{r}
+library(rdummypkg)
+```
+
+Session info:
+
+```{r}
 devtools::session_info()
 ```
 
